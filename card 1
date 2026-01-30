@@ -1,0 +1,42 @@
+{
+    type: "AdaptiveCard",
+    version: "1.5",
+    body: [
+        {
+            type: "TextBlock",
+            text: "Rate Your Experience",
+            size: "Medium",
+            weight: "Bolder"
+        },
+        {
+            type: "TextBlock",
+            text: "How helpful was the IT Assistant today?",
+            wrap: true
+        },
+        {
+            type: "Input.ChoiceSet",
+            id: "ratingScore",
+            style: "expanded",
+            isMultiSelect: false,
+            choices: [
+                { title: "1", value: "1" },
+                { title: "2", value: "2" },
+                { title: "3", value: "3" },
+                { title: "4", value: "4" },
+                { title: "5", value: "5" }
+            ]
+        },
+        {
+            type: "Input.Text",
+            id: "userComments",
+            placeholder: "Anything else we should know?",
+            isMultiline: true
+        }
+    ],
+    actions: [
+        {
+            type: "Action.Submit",
+            title: "Submit Feedback"
+        }
+    ]
+}
