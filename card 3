@@ -1,0 +1,56 @@
+{
+    type: "AdaptiveCard",
+    version: "1.5",
+    body: [
+        {
+            type: "ColumnSet",
+            columns: [
+                {
+                    type: "Column",
+                    width: "auto",
+                    items: [
+                        {
+                            type: "Image",
+                            url: "https://example.com/profile-placeholder.png",
+                            size: "Small",
+                            style: "Person"
+                        }
+                    ]
+                },
+                {
+                    type: "Column",
+                    width: "stretch",
+                    items: [
+                        {
+                            type: "TextBlock",
+                            text: "Contact Identified",
+                            weight: "Bolder",
+                            wrap: true
+                        },
+                        {
+                            type: "TextBlock",
+                            spacing: "None",
+                            text: "IT Manager: Sarah Jenkins",
+                            isSubtle: true,
+                            wrap: true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            type: "FactSet",
+            facts: [
+                { title: "Extension:", value: "x5542" },
+                { title: "Email:", value: "s.jenkins@company.com" }
+            ]
+        }
+    ],
+    actions: [
+        {
+            type: "Action.OpenUrl",
+            title: "Chat on Teams",
+            url: "https://teams.microsoft.com/l/chat/0/0?users=s.jenkins@company.com"
+        }
+    ]
+}
