@@ -1,0 +1,35 @@
+{
+    type: "AdaptiveCard",
+    version: "1.5",
+    body: [
+        {
+            type: "TextBlock",
+            text: "Software Access Request",
+            weight: "Bolder",
+            size: "Medium"
+        },
+        {
+            type: "Input.Text",
+            id: "softwareName",
+            label: "Software Name",
+            placeholder: "e.g. Adobe Creative Cloud, SQL Server"
+        },
+        {
+            type: "Input.Date",
+            id: "startDate",
+            label: "Required From Date"
+        },
+        {
+            type: "Input.Toggle",
+            id: "isPermanent",
+            label: "Is this a permanent request?",
+            value: "false"
+        }
+    ],
+    actions: [
+        {
+            type: "Action.Submit",
+            title: "Submit Request"
+        }
+    ]
+}
